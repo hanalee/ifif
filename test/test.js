@@ -1,0 +1,3 @@
+var ifif = require('../');
+
+ifif();

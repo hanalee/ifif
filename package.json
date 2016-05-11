@@ -1,0 +1,15 @@
+{
+  "name": "ifif",
+  "version": "0.1.7",
+  "description": "simple code validator",
+  "main": "index.js",
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hanalee/ifif.git"
+  },
+  "author": "Hana",
+  "license": "MIT"
+}
