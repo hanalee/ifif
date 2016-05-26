@@ -6,6 +6,11 @@ function ifif( condition, message, errorCode, report ) {
 		return;
 	}
 
+	if( typeof condition === 'string' && arguments.length === 1 ) {
+		message = condition;
+		condition = true;
+	}
+
 	if ( !! condition ) {
 		report( message, errorCode );
 	}

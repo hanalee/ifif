@@ -1,6 +1,6 @@
 {
   "name": "ifif",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "description": "simple code validator",
   "main": "index.js",
   "scripts": {
