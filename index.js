@@ -1,12 +1,11 @@
 
 function ifif( condition, message, errorCode, report ) {
 
-	if( arguments.length < 1 ) {
-		console.error('condition is required');
-		return;
-	}
-
-	if( typeof condition === 'string' && arguments.length === 1 ) {
+	if( typeof condition === 'string' && errorCode === void 0 && message === void 0 ) {
+		message = condition;
+		condition = true;
+	} else if( typeof condition === 'string' && message === void 0 ) {
+		errorCode = message;
 		message = condition;
 		condition = true;
 	}
@@ -19,19 +18,9 @@ function ifif( condition, message, errorCode, report ) {
 
 function reportError( message, errorCode ) {
 
-	if (message) {
+	message = message || 'check your ifif code, something\'s wrong..';
+	console.error(message);
 
-		console.error(message);
-
-	} else {
-
-		var msg = 'check your ifif code, something\'s wrong..';
-		if (typeof condition === 'string') {
-			msg += '\n' + condition;
-		}
-
-		console.error(msg);
-	}
 	if (errorCode) {
 		throw errorCode;
 	} else {
@@ -41,19 +30,8 @@ function reportError( message, errorCode ) {
 
 function reportWarn( message, errorCode ) {
 
-	if (message) {
-
-		console.warn(message);
-
-	} else {
-
-		var msg = 'check your ifif code, something\'s wrong..';
-		if (typeof condition === 'string') {
-			msg += '\n' + condition;
-		}
-
-		console.warn(msg);
-	}
+	message = message || 'check your ifif code, something\'s wrong..';
+	console.warn(message);
 }
 
 var _extends = function (target) {

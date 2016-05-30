@@ -1,3 +1,3 @@
 var ifif = require('../');
 
-ifif();
+ifif('It must be error');
