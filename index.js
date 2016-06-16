@@ -31,7 +31,10 @@ function reportError( message, errorCode ) {
 function reportWarn( message, errorCode ) {
 
 	message = message || 'check your ifif code, something\'s wrong..';
-	console.warn(message);
+	if( errorCode ) {
+		console.warn('ifif errorCode: ' + errorCode);
+	}
+	console.error('ifif warning: ' + message);
 }
 
 var _extends = function (target) {
